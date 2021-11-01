@@ -1,6 +1,6 @@
 <template>
-    <div class="container mt-5">
-        <button class="btn btn-success" @click="add">Add</button>
+    <div class="container text-left">
+        <button class="btn btn-success" @click="add">Add book</button>
         <table class="table mt-3">
             <thead>
                 <tr>
@@ -153,7 +153,6 @@ export default {
                 .delete("/api/books/" + id)
                 .then((res) => {
                     if (res.data.status) {
-                        console.log(res.data);
                         this.loadBooks();
                     } else {
                         console.log(res.data);
@@ -188,7 +187,6 @@ export default {
                     .then((res) => {
                         this.editId = false;
                         if (res.data.status) {
-                            console.log(res.data);
                             this.hide();
                             this.loadBooks();
                         } else {
@@ -205,7 +203,6 @@ export default {
                     .post("/api/books", body)
                     .then((res) => {
                         if (res.data.status) {
-                            console.log(res.data);
                             this.hide();
                             this.loadBooks();
                         } else {
@@ -222,7 +219,6 @@ export default {
                 .then((res) => {
                     if (res.data.status) {
                         this.books = res.data.books;
-                        console.log(this.books);
                     } else {
                         console.log(res.data.msg);
                     }

@@ -25,6 +25,22 @@ class AuthorController extends Controller
         }
     }
 
+    public function withBooksCount()
+    {
+        try {
+            $authors = Author::withCount('books')->get();
+            return [
+                'status' => true,
+                'authors' => $authors
+            ];
+        } catch(Exception $e) {
+            return [
+                'status' => false,
+                'msg' => $e->getMessage() . " on line " . $e->getLine()
+            ];
+        }
+    }
+
     /**
      * Show the form for creating a new resource.
      *

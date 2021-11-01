@@ -15,7 +15,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- Styles -->
     <style>
-        /* html {
+        html {
             line-height: 1.15;
             -webkit-text-size-adjust: 100%
         }
@@ -397,15 +397,11 @@
                 color: rgba(107, 114, 128, var(--tw-text-opacity))
             }
         }
-        } */
+        }
 
     </style>
 
     <style>
-        /* body {
-            font-family: 'Nunito', sans-serif;
-            background-color: rgb(226, 245, 227);
-        } */
 
         .modal-mask {
             position: fixed;
@@ -429,12 +425,8 @@
 
 <body class="antialiased">
 
-    <div id="app">
-        <crud></crud>
-    </div>
-
-    {{-- <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 mt-5 py-4 sm:pt-0">
-            @if (Route::has('login'))
+    <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 mt-5 py-4 sm:pt-0">
+            {{-- @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
                         <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
@@ -446,31 +438,12 @@
                         @endif
                     @endauth
                 </div>
-            @endif
+            @endif --}}
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="card text-center">
-                    <div class="card-header">
-                        <ul class="nav nav-tabs card-header-tabs">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="true" href="#">Active</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled">Disabled</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additsupporting text below as a natural lead-in to additional contensupporting text below as a natural lead-in to additional contensupporting text below as a natural lead-in to additional contensupporting text below as a natural lead-in to additional contensupporting text below as a natural lead-in to additional contensupporting text below as a natural lead-in to additional contenional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
+            <div id="app" class="col-md-10">
+                <index></index>
             </div>
-        </div> --}}
+        </div>
 </body>
 
 </html>
