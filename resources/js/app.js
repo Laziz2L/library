@@ -6,6 +6,7 @@
 
 require('./bootstrap');
 
+
 window.Vue = require('vue').default;
 
 /**
@@ -20,6 +21,7 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('crud', require('./views/Crud.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -27,6 +29,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+import VueTables from 'vue-crud-tables';
+Vue.use(VueTables);
 const app = new Vue({
     el: '#app',
 });
